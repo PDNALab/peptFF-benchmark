@@ -1,0 +1,4 @@
+parm ../stripped.peptide_sol.prmtop
+trajin ../stripped_md_10us.nc 1 last 50
+cluster hieragglo epsilon 3.0 averagelinkage rms :1-30@C,N,O,CA,CB  sieve 1 summary summary singlerepout representative repout unique repfmt pdb avgout avg avgfmt pdb out frame_vs_cluster.txt
+go
