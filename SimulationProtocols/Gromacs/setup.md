@@ -37,7 +37,7 @@ Ensure the relevant force field directory is present in your working directory.
 
 ---
 
-## 📁 MDP Files Required
+## MDP Files Required
 
 | Filename     | Description                                  |
 |--------------|----------------------------------------------|
@@ -52,7 +52,7 @@ Use the provided script (`simulation.sh`) to execute the pipeline.
 
 ---
 
-## 🚀 Simulation Workflow (Example: a99SBdisp.ff)
+## Simulation Workflow (Example: a99SBdisp.ff)
 
 ```bash
 # Step 1: Generate topology
@@ -71,4 +71,6 @@ gmx grompp -f ions.mdp -c peptide_solv.gro -p topol.top -o ions.tpr
 gmx genion -s ions.tpr -o peptide_solv_ions.gro -p topol.top -pname NA -nname CL -neutral -conc 0.1
 
 Note: check topol.top at every step to avoid errors.
+
+
 
