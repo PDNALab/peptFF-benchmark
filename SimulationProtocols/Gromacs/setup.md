@@ -69,6 +69,19 @@ Use the provided script (`simulation.sh`) to execute the run minimization, heati
 
 ```
 
+## To generate Hydrogen mass repartitioned topology (only used during production runs)
+Note: it is recommended to create a new directory such as "Production" to prevent overwriting the files.
+
+```bash
+# Step 1: Generate topology
+gmx pdb2gmx -f peptide_reduced.pdb -o peptide_processed.gro -heavyh
+
+Repeat steps 2-5 as mentioned in Simulation workflow.
+
+mv topol.top topol_hmass.top
+
+```
+
 ## Convergence Check
 
 Check key system properties to ensure simulation stability:
