@@ -100,6 +100,9 @@ gmx trjconv -s md_1.tpr -f md_1.xtc -o md_1_stripped.xtc -pbc mol -center
 gmx editconf -ndef -f md_1.gro -o md_1_stripped.gro
 # Select group 1 (Protein)
 
+# To catenate all trajectories together in order
+gmx trjcat -f md_{1..50}_stripped.xtc -o md_catenated.xtc -cat
+
 ```
 
 
