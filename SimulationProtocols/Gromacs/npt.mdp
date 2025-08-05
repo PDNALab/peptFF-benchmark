@@ -42,4 +42,3 @@ refcoord_scaling        = com
 pbc                     = xyz       ; 3-D PBC
 ; Velocity generation
 gen_vel                 = no        ; Velocity generation is off 
-
