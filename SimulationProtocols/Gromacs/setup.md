@@ -85,6 +85,21 @@ gmx energy -f npt.edr -o pressure.xvg
 gmx energy -f npt.edr -o density.xvg
 
 ```
+## Post-Processing Trajectories
 
+```bash
+# Remove periodic boundary conditions
+gmx trjconv -s md_1.tpr -f md_1.xtc -o md_1_noPBC.xtc -pbc mol -center
+# Select group 1 (Protein) and group 0 (System)
+
+# Strip solvent and ions
+gmx trjconv -s md_1.tpr -f md_1.xtc -o md_1_stripped.xtc -pbc mol -center
+# Select group 1 (Protein)
+
+# Strip coordinate file (.gro)
+gmx editconf -ndef -f md_1.gro -o md_1_stripped.gro
+# Select group 1 (Protein)
+
+```
 
 
