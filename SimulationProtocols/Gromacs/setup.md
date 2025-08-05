@@ -3,7 +3,6 @@
 This project provides a structured pipeline to run molecular dynamics simulations in **GROMACS 2019.2**, using various force fields and corresponding water models. 
 The workflow includes system preparation and processing trajectory.
 
-
 ## Software Dependencies
 
 The following modules or software versions were loaded to run GROMACS simulations:
@@ -66,9 +65,14 @@ gmx genion -s ions.tpr -o peptide_solv_ions.gro -p topol.top -pname NA -nname CL
 
 Note: check topol.top at every step to avoid errors.
 
+Use the provided script (`simulation.sh`) to execute the run minimization, heating, equilibration and production simulations.
+
+```
+
 ## Convergence Check
 
 Check key system properties to ensure simulation stability:
+
 
 ```bash
 # Extract temperature from NVT phase
@@ -79,6 +83,8 @@ gmx energy -f npt.edr -o pressure.xvg
 
 # Extract density from NPT phase
 gmx energy -f npt.edr -o density.xvg
+
+```
 
 
 
