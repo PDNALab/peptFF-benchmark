@@ -118,6 +118,6 @@ gmx trjcat -f md_{1..50}_stripped.xtc -o md_catenated.xtc -cat
 
 ```
 
-Post processing all the analysis were performed using cpptraj and MDAnalysis tool. 
+All the analysis were performed using cpptraj and MDAnalysis tool. 
 
 
