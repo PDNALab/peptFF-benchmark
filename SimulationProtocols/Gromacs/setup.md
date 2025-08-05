@@ -115,6 +115,8 @@ gmx editconf -ndef -f md_1.gro -o md_1_stripped.gro
 
 # To catenate all trajectories together in order
 gmx trjcat -f md_{1..50}_stripped.xtc -o md_catenated.xtc -cat
+# To get stripped.pdb
+gmx editconf -f md_1_stripped.gro -o md_1_stripped.pdb 
 
 ```
 
