@@ -26,6 +26,7 @@ The following modules or software versions were loaded to run GROMACS simulation
 | Charmm36m          | `TIP3P`                     |    `-`            |
 
 To add the CMAP parameters corrections, follow the steps from: **[chaohao2010/ADD-CMAP](https://github.com/chaohao2010/ADD-CMAP)**
+For Charmm36m, topologies and coordinates were generated using: **[CHARMM-GUI](https://www.charmm-gui.org/)**
 
 ## Input Files
 
