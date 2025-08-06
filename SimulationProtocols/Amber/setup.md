@@ -58,7 +58,7 @@ tleap -f tleap.in
 # Step 2: Randomize ions positions
 cpptraj -p peptide_sol.prmtop -i cpptraj_randomizeions.in
 
-# Step 3: Add CMAP corrections
+# Step 3: Add CMAP corrections if needed
 # Follow steps from https://github.com/chaohao2010/ADD-CMAP
 python3 ADD-CMAP.py -p peptide_sol.prmtop -c ff14IDPs.para -o amber_CMAP.prmtop -s
 
