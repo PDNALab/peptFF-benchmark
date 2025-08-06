@@ -57,7 +57,7 @@ tleap -f tleap.in
 cpptraj -p peptide_sol.prmtop -i cpptraj_randomizeions.in
 
 # Step 3: Add CMAP corrections
-# Follow steps from: [chaohao2010/ADD-CMAP](https://github.com/chaohao2010/ADD-CMAP)
+# Follow steps from https://github.com/chaohao2010/ADD-CMAP
 python3 ADD-CMAP.py -p peptide_sol.prmtop -c ff14IDPs.para -o amber_CMAP.prmtop -s
 
 # Step 4: Generate Hydrogen mass repartitioned topology
