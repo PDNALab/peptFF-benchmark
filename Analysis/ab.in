@@ -1,0 +1,6 @@
+parm strip.peptide_sol.prmtop
+trajin autoimage.nc
+secstruct :1-13 out dssp.dat
+matrix mwcovar name ssmap out sstime.dat :1-13
+go
+
