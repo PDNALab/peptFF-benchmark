@@ -25,7 +25,8 @@ The following modules or software versions were loaded to run GROMACS simulation
 | ff14IDPsFF         | `TIP3P`                     | `ff14IDPsFF.para` |
 | Charmm36m          | `TIP3P`                     |    `-`            |
 
-To add the CMAP parameters corrections, follow the steps from: **[chaohao2010/ADD-CMAP](https://github.com/chaohao2010/ADD-CMAP)**
+To add the CMAP parameters corrections, follow the steps from: **[chaohao2010/ADD-CMAP](https://github.com/chaohao2010/ADD-CMAP)**.
+
 For Charmm36m, topologies and coordinates were generated using: **[CHARMM-GUI](https://www.charmm-gui.org/)**
 
 ## Input Files
