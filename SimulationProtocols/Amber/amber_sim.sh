@@ -26,7 +26,7 @@ srun sander -O -i min5.in -o min5.out -p peptide_sol.prmtop -c min4.rst -r min5.
 srun sander -O -i min6.in -o min6.out -p peptide_sol.prmtop -c min5.rst -r min6.rst -inf min6.mdinfo -ref min5.rst
 
 ## EQUILIBRATION STAGE
-pmemd.cuda -O -i mdt.in -o heat.out -p peptide_sol.prmtop -c ../minim/min6.rst -r heat.rst -x heat.nc -inf heat.mdinfo -ref ../minim/min6.rst
+pmemd.cuda -O -i mdt.in -o heat.out -p peptide_sol.prmtop -c min6.rst -r heat.rst -x heat.nc -inf heat.mdinfo -ref min6.rst
 pmemd.cuda -O -i npt1.in -o npt1.out -p peptide_sol.prmtop -c heat.rst -r npt1.rst -x npt1.nc -inf npt1.mdinfo -ref heat.rst
 pmemd.cuda -O -i npt2.in -o npt2.out -p peptide_sol.prmtop -c npt1.rst -r npt2.rst -x npt2.nc -inf npt2.mdinfo -ref npt1.rst
 pmemd.cuda -O -i md.in -o md1.out -p peptide_hmass.prmtop -c npt2.rst -r md1.rst -x md1.nc -inf md1.mdinfo -ref npt2.rst #200ns simulation
