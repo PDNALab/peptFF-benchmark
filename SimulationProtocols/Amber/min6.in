@@ -1,0 +1,9 @@
+polyA-polyT 10-mer: initial minimization solvent + ions
+ &cntrl
+  imin   = 1,
+  maxcyc = 4000,
+  ncyc   = 2000,
+  ntb    = 1,
+  ntr    = 0,
+  cut    = 8.0
+ /

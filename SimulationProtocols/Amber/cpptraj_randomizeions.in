@@ -1,0 +1,4 @@
+trajin peptide_sol.inpcrd
+randomizeions @Na+,Cl- around !:WAT,Na+,Cl- by 5.0 overlap 3.0
+trajout peptide_sol.rst7
+go

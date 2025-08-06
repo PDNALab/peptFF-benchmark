@@ -1,0 +1,22 @@
+20ns of production - NTP - Langevin thermostat - gamma 0.01 - Monte Carlo barostat - BOOST
+ &cntrl
+   imin=0, 
+   irest=1,
+   tol=0.0000001,
+   nstlim=50000000, 
+   ntx=5,                           ! Read coordinates and velocities from restart
+   ntc=2, ntf=2,                    ! SHAKE, constrain lenghts of the bonds having H 
+   ntpr=5000, ntwr=5000, ntwx=5000, ! save every 5000 frames - 20ps
+   dt=0.004,                        ! Time step using H-mass repartition
+   iwrap=1,                         ! Wrap coordinates
+   ntb=2,                           ! Periodic boundaries
+   ntt=3, gamma_ln=0.01             ! Langevin dynamics
+   ntp=1,                           ! Pressure scaling with isotropic position
+   cut=8.0,
+   barostat=2,                      ! Monte Carlo Barostat
+   temp0=298.14,
+ /
+&ewald
+  netfrc=0,
+  skin_permit=0.75,
+&end

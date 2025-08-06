@@ -1,0 +1,19 @@
+source leaprc.protein.ff19SB
+source leaprc.water.opc
+loadoff atomic_ions.lib
+
+set default PBradii mbondi3
+peptide = loadpdb peptide.pdb
+check peptide
+savepdb peptide peptide_dry.pdb
+saveamberparm peptide peptide_dry.prmtop peptide_dry.inpcrd
+
+solvateOct peptide OPCBOX 8.0 
+addions peptide Na+ 0
+addions peptide Cl- 0
+addIonsRand peptide Na+ 15 Cl- 15
+check peptide
+savepdb peptide peptide_sol.pdb
+saveamberparm peptide peptide_sol.prmtop peptide_sol.inpcrd
+
+quit
